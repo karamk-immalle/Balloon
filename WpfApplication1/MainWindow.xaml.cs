@@ -20,9 +20,27 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Balloon b1 = new Balloon();
+       
         public MainWindow()
         {
             InitializeComponent();
+            b1.DisplayOn(canvas);           
+        }
+
+        private void Move_Button_Click(object sender, RoutedEventArgs e)
+        {
+            b1.MoveUp(10);
+        }
+
+        private void Grow_Button_Click(object sender, RoutedEventArgs e)
+        {
+            b1.ChangeSize(5);
+        }
+
+        private void MoveDown_button_Click(object sender, RoutedEventArgs e)
+        {
+            b1.MoveDown(10);
         }
     }
 }
